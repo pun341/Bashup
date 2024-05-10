@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Made By Pun
+# https://github.com/pun341/Bash-Backupper/tree/main
+# https://github.com/pun341
+
 dir_before=$PWD
 arg1=$1
 all_args="$@"
@@ -23,4 +27,3 @@ elif [ "$arg1" = "-h" ] || [ "$arg1" = "-help" ]; then
 else
 	echo "Use ./backupper -h or ./backupper -help"
 fi
-
