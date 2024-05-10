@@ -1,0 +1,25 @@
+#!/bin/bash 
+
+dir_before=$PWD
+arg1=$1
+all_args="$@"
+arg2=$2
+arg3=$3
+arg4=$4
+
+if [ $arg1 = "-e" ] || [ $arg1 = "-execute" ] || [ $arg1 = "-exec" ]; then
+	mkdir ./"$arg4.temp"
+	cp -r ./"$arg4"/* ./"$arg4.temp"
+	cd ./"$arg4.temp"
+	eval ./"$arg3"
+	cd $dir_before
+	rm -rf ./"$arg4.temp"
+
+elif [ "$arg1" = "-h" ] || [ "$arg1" = "-help" ]; then
+	echo "help!"
+	echo "Backupper is a tool to run files without the fear of losing the hard work you have done."
+	echo "Commands:"
+	echo "./backupper -e <COMMAND (e.g. python3)> <FILE TO RUN> <FILE DIR IS IN>"
+else
+	echo "Use ./backupper -h or ./backupper -help"
+fi
