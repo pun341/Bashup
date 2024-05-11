@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Made By Pun
+# Links:
 # https://github.com/pun341/Bash-Backupper/tree/main
 # https://github.com/pun341
+# https://replit.com/@AmataJindapol/Bash-Backupper
 
 dir_before=$PWD
 arg1=$1
