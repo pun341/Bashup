@@ -22,7 +22,7 @@ if [ $arg1 = "-e" ] || [ $arg1 = "-execute" ] || [ $arg1 = "-exec" ]; then
 elif [ "$arg1" = "-h" ] || [ "$arg1" = "-help" ]; then
 	echo "help!"
 	echo "Backupper is a tool to run files without the fear of losing the hard work you have done."
-	echo "Commands:"
+	echo "Command:"
 	echo "./backupper -e <COMMAND (e.g. python3)> <FILE TO RUN> <FILE DIR IS IN>"
 else
 	echo "Use ./backupper -h or ./backupper -help"
