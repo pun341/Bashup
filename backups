@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mkdir ./Backups/"$1-backup"
+cp -r ./$1 ./Backups/"$1-backup"
