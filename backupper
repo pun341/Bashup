@@ -21,12 +21,15 @@ if [ $arg1 = "-e" ] || [ $arg1 = "-execute" ] || [ $arg1 = "-exec" ]; then
 	cd $dir_before
 	rm -rf ./"$arg4.temp"
 
+elif [ "$arg1" = "-b" ] || [ "$arg1" = "-backup" ]; then
+	./backups $arg2
 elif [ "$arg1" = "-h" ] || [ "$arg1" = "-help" ]; then
 	echo "help!"
 	echo "Backupper is a tool to run files without the fear of losing the hard work you have done."
- echo "Backupper makes a temporary file and then runs that instead of the main file."
+ 	echo "Backupper makes a temporary file and then runs that instead of the main file."
 	echo "Command:"
 	echo "./backupper -e <COMMAND (e.g. python3)> <FILE TO RUN> <FILE DIR IS IN>"
+	echo "./backupper -b <DIR>"
 else
 	echo "Use ./backupper -h or ./backupper -help"
 fi
